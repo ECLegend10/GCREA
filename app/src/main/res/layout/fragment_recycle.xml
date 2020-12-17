@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecycleFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ForUserRequest"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6"/>
+
+        <TextView
+            android:id="@+id/title_recycle"
+            style="@style/actionBarStyle"
+            android:text="@string/recycle_title_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_text_recycle"
+            style="@style/textTitle"
+            android:text="@string/your_request"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_recycle"/>
+
+
+        <TextView
+            android:id="@+id/noRequest"
+            style="@style/textNormal"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/title_text_recycle"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_recycle"
+            android:text="@string/no_request_text" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/hasRequest"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/title_text_recycle"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_recycle">
+
+            <TextView
+                android:id="@+id/request_venue"
+                style="@style/textNormal"
+                android:text="@string/revenue_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/request_date"
+                style="@style/textNormal"
+                android:text="@string/redate_text"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/request_venue"/>
+
+            <TextView
+                android:id="@+id/request_time"
+                style="@style/textNormal"
+                android:text="@string/retime_text"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/request_date" />
+
+            <TextView
+                android:id="@+id/request_items"
+                style="@style/textNormal"
+                android:text="@string/reitems_text"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/request_time"/>
+
+            <TextView
+                android:id="@+id/request_remarks"
+                style="@style/textNormal"
+                android:text="@string/reremarks_text"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/request_items" />
+
+            <TextView
+                android:id="@+id/request_status"
+                style="@style/textNormal"
+                android:text="@string/restatus_text"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/request_remarks" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="false"
+            app:maxImageSize="50dp"
+            android:tint="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_map"
+            style="@style/textNormal"
+            android:text="@string/where_to_find_us"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideline"/>
+
+        <FrameLayout
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ForAdminRequest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/title_recycle_admin"
+            style="@style/actionBarStyle"
+            android:text="@string/recycle_title_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pendingRequestTitle"
+            android:text="@string/admin_request1_title"
+            style="@style/textTitle"
+            app:layout_constraintTop_toBottomOf="@+id/title_recycle_admin"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/noPendingRequest"
+            style="@style/textNormal"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/pendingRequestTitle"
+            app:layout_constraintTop_toBottomOf="@+id/pendingRequestTitle"
+            android:text="@string/no_pending_request" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/pendingRecyclerView"
+            android:layout_margin="10dp"
+            android:isScrollContainer="true"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/pendingRequestTitle"
+            app:layout_constraintTop_toBottomOf="@+id/pendingRequestTitle"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50"/>
+
+        <TextView
+            android:id="@+id/completeRequestTitle"
+            android:text="@string/admin_request2_title"
+            style="@style/textTitle"
+            app:layout_constraintTop_toBottomOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/noAcceptedRequest"
+            style="@style/textNormal"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/completeRequestTitle"
+            app:layout_constraintTop_toBottomOf="@+id/completeRequestTitle"
+            android:text="@string/no_accepted_request" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/acceptedRecyclerView"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:isScrollContainer="true"
+            app:layout_constraintStart_toStartOf="@+id/completeRequestTitle"
+            app:layout_constraintTop_toBottomOf="@+id/completeRequestTitle"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

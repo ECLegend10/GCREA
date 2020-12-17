@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".AboutFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/aboutTitle"
+            style="@style/actionBarStyle"
+            android:text="@string/about_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/GCLogo"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/aboutTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/greenClubLogo"/>
+
+        <TextView
+            android:id="@+id/clubTitle"
+            style="@style/textTitle"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/GCLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/title_club" />
+
+        <TextView
+            android:id="@+id/clubDescription"
+            style="@style/displayDesc"
+            android:text="@string/club_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/clubTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/committee_title"
+            style="@style/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/clubDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/committee_title" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/committee1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/committee_title">
+
+            <ImageView
+                android:id="@+id/committee1Picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/people1" />
+
+            <TextView
+                android:id="@+id/committee1Name"
+                style="@style/textNormal"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@+id/committee1Picture"
+                app:layout_constraintTop_toTopOf="@+id/committee1Picture"
+                android:text="Laurie Carney" />
+
+            <TextView
+                android:id="@+id/committee1Position"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toEndOf="@+id/committee1Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee1Name"
+                android:text="President" />
+
+            <TextView
+                android:id="@+id/committee1Quote"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toEndOf="@+id/committee1Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee1Position"
+                android:text='\"Green Club is the best club!\"' />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/committee1"
+            app:layout_constraintBottom_toTopOf="@+id/committee2"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/committee2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/committee1">
+
+            <ImageView
+                android:id="@+id/committee2Picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/people2" />
+
+            <TextView
+                android:id="@+id/committee2Name"
+                style="@style/textNormal"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/committee2Picture"
+                app:layout_constraintTop_toTopOf="@+id/committee2Picture"
+                android:text="Kade Alston" />
+
+            <TextView
+                android:id="@+id/committee2Position"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/committee2Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee2Name"
+                android:text="Vice President" />
+
+            <TextView
+                android:id="@+id/committee2Quote"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/committee2Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee2Position"
+                android:text='\"All the activities are meaningful!\"' />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/committee2"
+            app:layout_constraintBottom_toTopOf="@+id/committee3"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/committee3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/committee2">
+
+            <ImageView
+                android:id="@+id/committee3Picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/people3" />
+
+            <TextView
+                android:id="@+id/committee3Name"
+                style="@style/textNormal"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@+id/committee3Picture"
+                app:layout_constraintTop_toTopOf="@+id/committee3Picture"
+                android:text="Manuel Conrad" />
+
+            <TextView
+                android:id="@+id/committee3Position"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toEndOf="@+id/committee3Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee3Name"
+                android:text="Secretary" />
+
+            <TextView
+                android:id="@+id/committee3Quote"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toEndOf="@+id/committee3Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee3Position"
+                android:text='\"I enjoy joining Green Club!\"' />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/committee3"
+            app:layout_constraintBottom_toTopOf="@+id/committee4"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/committee4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/committee3">
+
+            <ImageView
+                android:id="@+id/committee4Picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/people4" />
+
+            <TextView
+                android:id="@+id/committee4Name"
+                style="@style/textNormal"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/committee4Picture"
+                app:layout_constraintTop_toTopOf="@+id/committee4Picture"
+                android:text="Jimmy Mccall" />
+
+            <TextView
+                android:id="@+id/committee4Position"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/committee4Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee4Name"
+                android:text="Tresurer" />
+
+            <TextView
+                android:id="@+id/committee4Quote"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/committee4Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee4Position"
+                android:text='\"Let us care for our environment!\"' />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/committee4"
+            app:layout_constraintBottom_toTopOf="@+id/committee5"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/committee5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/committee4">
+
+            <ImageView
+                android:id="@+id/committee5Picture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/people5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/committee5Name"
+                style="@style/textNormal"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@+id/committee5Picture"
+                app:layout_constraintTop_toTopOf="@+id/committee5Picture"
+                android:text="Conan O'Brien" />
+
+            <TextView
+                android:id="@+id/committee5Position"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toEndOf="@+id/committee5Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee5Name"
+                android:text="Designer" />
+
+            <TextView
+                android:id="@+id/committee5Quote"
+                style="@style/textNormal"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toEndOf="@+id/committee5Picture"
+                app:layout_constraintTop_toBottomOf="@+id/committee5Position"
+                android:text='\"Come join us!\"' />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/contactCommitteeText"
+            style="@style/textNormal"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="@+id/committee5"
+            app:layout_constraintEnd_toEndOf="@+id/committee5"
+            app:layout_constraintTop_toBottomOf="@+id/committee5"
+            android:text="Any question please contact:\n-Laurie Carney (012-3456789)\n-Kade Alston (123-4567890)" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

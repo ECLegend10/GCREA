@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEditEventActivity">
+
+
+    <TextView
+        android:id="@+id/addedit_action_bar"
+        android:text="@string/add_event_title"
+        style="@style/actionBarStyle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/event_name_addedit"
+        style="@style/textTitle"
+        android:text="Event Name: "
+        app:layout_constraintTop_toBottomOf="@id/addedit_action_bar"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/edit_text_border"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/event_name_addedit"
+        app:layout_constraintStart_toStartOf="@id/event_name_addedit"/>
+
+    <TextView
+        android:id="@+id/event_desc_addedit"
+        style="@style/textTitle"
+        android:text="Details"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_name"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/edit_text_desc"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:ems="10"
+        android:layout_marginTop="3dp"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/event_desc_addedit"
+        app:layout_constraintStart_toStartOf="@id/event_desc_addedit"
+        android:background="@drawable/edit_text_border"/>
+
+    <TextView
+        android:id="@+id/event_venue_addedit"
+        style="@style/textTitle"
+        android:text="Venue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_desc"/>
+
+    <EditText
+        android:id="@+id/edit_text_venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/edit_text_border"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/event_venue_addedit"
+        app:layout_constraintTop_toBottomOf="@id/event_venue_addedit"/>
+
+    <TextView
+        android:id="@+id/event_date_addedit"
+        style="@style/textTitle"
+        android:text="@string/textView_reDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_venue"/>
+
+    <TextView
+        android:id="@+id/edit_text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:padding="5dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="@id/event_date_addedit"
+        app:layout_constraintTop_toBottomOf="@id/event_date_addedit"
+        app:drawableEndCompat="@drawable/calendar" />
+
+    <TextView
+        android:id="@+id/event_time_addedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textView_reTime"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/edit_text_date"
+        app:layout_constraintTop_toTopOf="@id/event_date_addedit"/>
+
+    <TextView
+        android:id="@+id/edit_text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintStart_toStartOf="@id/event_time_addedit"
+        app:layout_constraintTop_toTopOf="@id/edit_text_date"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_date"
+        android:background="@drawable/edit_text_border"
+        android:padding="5dp"
+        app:drawableEndCompat="@drawable/clock" />
+
+    <TextView
+        android:id="@+id/event_fees_addedit"
+        style="@style/textTitle"
+        android:text="Fees"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_date"/>
+
+    <EditText
+        android:id="@+id/edit_text_fees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:layout_marginTop="3dp"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@id/event_fees_addedit"
+        app:layout_constraintTop_toBottomOf="@id/event_fees_addedit"/>
+
+    <TextView
+        android:id="@+id/event_points_addedit"
+        style="@style/textTitle"
+        android:text="Points"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_fees"/>
+
+    <EditText
+        android:id="@+id/editTextPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:ems="3"
+        android:textAlignment="center"
+        android:layout_marginTop="3dp"
+        android:inputType="number"
+        android:background="@drawable/edit_text_border"
+        app:layout_constraintStart_toStartOf="@id/event_points_addedit"
+        app:layout_constraintTop_toTopOf="@id/event_poster_input"
+        app:layout_constraintBottom_toBottomOf="@+id/event_poster_input"/>
+
+    <TextView
+        android:id="@+id/event_poster_edit"
+        style="@style/textTitle"
+        android:text="Event Poster"
+        app:layout_constraintStart_toStartOf="@+id/event_time_addedit"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_fees"/>
+
+    <Button
+        android:id="@+id/event_poster_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Pick a poster"
+        android:paddingHorizontal="5dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorLightBrown"
+        app:layout_constraintStart_toStartOf="@+id/event_poster_edit"
+        app:layout_constraintTop_toBottomOf="@id/event_poster_edit"/>
+
+    <Button
+        android:id="@+id/addEditButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_event_text"
+        app:layout_constraintTop_toBottomOf="@id/editTextPoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

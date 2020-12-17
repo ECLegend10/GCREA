@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/request_student_id"
+        style="@style/textTitle"
+        android:text="@string/request_by_userid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/request_date"
+        style="@style/textNormal"
+        android:text="@string/redate_text"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/request_student_id"
+        app:layout_constraintTop_toBottomOf="@+id/request_student_id"/>
+
+    <TextView
+        android:id="@+id/request_time"
+        style="@style/textNormal"
+        android:text="@string/retime_text"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/request_date"
+        app:layout_constraintEnd_toStartOf="@+id/rejectButton"
+        app:layout_constraintTop_toBottomOf="@+id/request_student_id" />
+
+    <TextView
+        android:id="@+id/request_items"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:textColor="@android:color/black"
+        android:text="@string/reitems_text"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:isScrollContainer="true"
+        app:layout_constraintStart_toStartOf="@+id/request_student_id"
+        app:layout_constraintEnd_toStartOf="@+id/rejectButton"
+        app:layout_constraintTop_toBottomOf="@+id/request_time" />
+
+    <TextView
+        android:id="@+id/request_remarks"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:text="@string/reremarks_text"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@android:color/black"
+        android:lines="2"
+        android:isScrollContainer="true"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="@+id/request_student_id"
+        app:layout_constraintEnd_toStartOf="@+id/rejectButton"
+        app:layout_constraintTop_toBottomOf="@+id/request_items"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/acceptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_outline_check_24"
+        android:contentDescription="@string/accept_request"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="0dp"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/rejectButton"
+        app:tint="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/rejectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_baseline_clear_24"
+        android:contentDescription="@string/reject_request"
+        app:tint="@android:color/white"
+        android:paddingHorizontal="20dp"
+        android:background="@android:color/holo_red_dark"
+        app:layout_constraintTop_toBottomOf="@+id/acceptButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

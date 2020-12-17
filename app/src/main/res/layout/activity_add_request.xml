@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRequest">
+
+    <TextView
+        android:id="@+id/title_recycle"
+        style="@style/actionBarStyle"
+        android:text="@string/recycle_title_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/go_back_text"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_recycle"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/textView_reDate"
+        style="@style/textTitle"
+        android:text="@string/textView_reDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrowBack"/>
+
+    <TextView
+        android:id="@+id/editText_reDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:padding="5dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="@id/textView_reDate"
+        app:layout_constraintTop_toBottomOf="@id/textView_reDate"
+        app:drawableEndCompat="@drawable/calendar" />
+
+    <TextView
+        android:id="@+id/textView_reTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textView_reTime"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/editText_reDate"
+        app:layout_constraintTop_toTopOf="@id/textView_reDate"/>
+
+    <TextView
+        android:id="@+id/editText_reTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        app:layout_constraintStart_toStartOf="@id/textView_reTime"
+        app:layout_constraintTop_toTopOf="@id/editText_reDate"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_reDate"
+        android:background="@drawable/edit_text_border"
+        android:padding="5dp"
+        app:drawableEndCompat="@drawable/clock" />
+
+    <TextView
+        android:id="@+id/textView_reItems"
+        style="@style/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycleForm_ItemSubtitle"
+        app:layout_constraintTop_toBottomOf="@id/editText_reTime"
+        app:layout_constraintBottom_toTopOf="@id/checkBox_papers"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/checkBox_papers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recycleForm_checkbox1"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@id/textView_reItems"
+        app:layout_constraintStart_toStartOf="@+id/textView_reItems"/>
+
+    <CheckBox
+        android:id="@+id/checkBox_plasticBottles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recycleForm_checkbox2"
+        app:layout_constraintStart_toStartOf="@+id/textView_reItems"
+        app:layout_constraintTop_toBottomOf="@id/checkBox_papers"/>
+
+    <CheckBox
+        android:id="@+id/checkBox_electronics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recycleForm_checbox3"
+        app:layout_constraintTop_toBottomOf="@id/checkBox_plasticBottles"
+        app:layout_constraintStart_toStartOf="@+id/textView_reItems"/>
+
+    <CheckBox
+        android:id="@+id/checkBox_other"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recycleForm_checkbox4"
+        app:layout_constraintStart_toStartOf="@+id/textView_reItems"
+        app:layout_constraintTop_toBottomOf="@id/checkBox_electronics" />
+
+    <EditText
+        android:id="@+id/editText_otherItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="3dp"
+        android:visibility="gone"
+        android:layout_marginStart="10dp"
+        android:hint="@string/editText_otherItems_hint"
+        app:layout_constraintTop_toTopOf="@id/checkBox_other"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox_other"
+        app:layout_constraintStart_toEndOf="@id/checkBox_other"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/textView_reminder"
+        style="@style/textNormal"
+        android:layout_marginTop="3dp"
+        android:text="@string/reminder_text"
+        app:layout_constraintTop_toBottomOf="@id/checkBox_other"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_other"/>
+
+
+    <TextView
+        android:id="@+id/textView_reRemarks"
+        style="@style/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textView_reRemarks"
+        app:layout_constraintTop_toBottomOf="@id/textView_reminder"
+        app:layout_constraintBottom_toTopOf="@id/editText_reRemarks"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editText_reRemarks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:inputType="textImeMultiLine"
+        android:padding="5dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="@+id/textView_reRemarks"
+        app:layout_constraintEnd_toEndOf="@+id/editText_reTime"
+        app:layout_constraintTop_toBottomOf="@id/textView_reRemarks"
+        app:layout_constraintBottom_toTopOf="@id/recycleForm_submitButton"/>
+
+    <Button
+        android:id="@+id/recycleForm_submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycleForm_submitButton"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/recycleForm_resetButton"
+        app:layout_constraintTop_toBottomOf="@id/editText_reRemarks"/>
+
+    <Button
+        android:id="@+id/recycleForm_resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycleForm_ResetButton"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/recycleForm_submitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/recycleForm_submitButton"
+        app:layout_constraintBottom_toBottomOf="@id/recycleForm_submitButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

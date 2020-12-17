@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#056738 </color> <!-- Dark green -->
+    <color name="colorPrimaryDark">#3C2315 </color> <!-- Dark Brown -->
+    <color name="colorAccent">#8CC63D </color> <!-- Dark green -->
+    <color name="colorLightBrown">#A67A53 </color>
+</resources>

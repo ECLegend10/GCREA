@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RewardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@+id/view_fill_white"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0" />
+
+        <TextView
+            android:id="@+id/title_reward"
+            style="@style/actionBarStyle"
+            android:text="@string/reward_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/reward_text"
+            style="@style/textTitle"
+            android:text="@string/rewards_title_text"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/title_reward" />
+
+        <TextView
+            android:id="@+id/pointsTitle"
+            style="@style/textTitle"
+            android:text="@string/my_points_title"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/title_reward" />
+
+        <View
+            android:id="@+id/view_border"
+            android:layout_width="44dp"
+            android:layout_height="604dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/pointsTitle"
+            app:layout_constraintStart_toStartOf="@+id/pointsTitle"
+            app:layout_constraintEnd_toEndOf="@+id/pointsTitle"/>
+
+        <View
+            android:id="@+id/view_fill_white"
+            android:layout_width="40dp"
+            android:layout_height="600dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/pointsTitle"
+            app:layout_constraintStart_toStartOf="@+id/pointsTitle"
+            app:layout_constraintEnd_toEndOf="@+id/pointsTitle"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="120dp"
+            android:layout_height="600dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/pointsTitle"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white">
+
+            <View
+                android:id="@+id/view_fill"
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/pointsText"
+                style="@style/textNormal"
+                android:text="@string/points_text"
+                android:layout_marginStart="15dp"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/view_fill"
+                app:layout_constraintTop_toBottomOf="@+id/view_fill"
+                app:layout_constraintBottom_toBottomOf="@+id/view_fill" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/reward1"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward1_text"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward1Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward1Line"/>
+
+        <View
+            android:id="@+id/reward1Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/view_fill_white"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reward2"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward2_text"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward2Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward2Line"/>
+
+        <View
+            android:id="@+id/reward2Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/reward1Line"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reward3"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward3_text"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward3Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward3Line"/>
+
+        <View
+            android:id="@+id/reward3Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/reward2Line"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reward4"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward4_text"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward4Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward4Line"/>
+
+        <View
+            android:id="@+id/reward4Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/reward3Line"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reward5"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward5_text"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward5Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward5Line"/>
+
+        <View
+            android:id="@+id/reward5Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/reward4Line"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reward6"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward6_text"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward6Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward6Line"/>
+
+        <View
+            android:id="@+id/reward6Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/reward5Line"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reward7"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward7_text"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward7Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward7Line"/>
+
+        <View
+            android:id="@+id/reward7Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/reward6Line"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reward8"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward8_text"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward8Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward8Line"/>
+
+        <View
+            android:id="@+id/reward8Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/reward7Line"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reward9"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward9_text"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward9Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward9Line"/>
+
+        <View
+            android:id="@+id/reward9Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/reward8Line"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reward10"
+            style="@style/textNormal"
+            android:textSize="16sp"
+            android:text="@string/reward10_text"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@+id/reward_text"
+            app:layout_constraintEnd_toEndOf="@+id/reward_text"
+            app:layout_constraintTop_toTopOf="@+id/reward10Line"
+            app:layout_constraintBottom_toBottomOf="@+id/reward10Line"/>
+
+        <View
+            android:id="@+id/reward10Line"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="@+id/reward9Line"
+            app:layout_constraintStart_toStartOf="@+id/view_fill_white"
+            app:layout_constraintEnd_toEndOf="@+id/view_fill_white"/>
+
+        <TextView
+            android:id="@+id/reminderText"
+            style="@style/textNormal"
+            android:text="@string/remind_text"
+            android:textAlignment="center"
+            android:lines="3"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_border"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
